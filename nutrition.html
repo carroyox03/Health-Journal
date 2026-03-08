@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <title> Nutrition </title>
+        <link rel="stylesheet" href="./styles/header.css">
+        <link rel="stylesheet" href="./styles/nutrition.css">
+        <link rel="stylesheet" href="./styles/footer.css">
+        <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+    </head>
+
+    <body>
+        <header>
+            <div id="header-top">
+                <div id="title-logo">
+                    <h1 id="title"><a href="index.html">Health Journal</a></h1>
+                    <img id="logo" src="./images/heart" alt="Heart icon representing health and wellness">
+                </div>
+                <div id="world-clock">00:00:00 AM</div>
+                <div id="nav-expand"></div>
+            </div>
+
+            <nav>
+                <div id="menubar">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="nutrition.html">Nutrition</a></li>
+                        <li><a href="exercise.html">Exercise</a></li>
+                        <li><a href="bio.html">Bio</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <h2 id="nutr-title"> Nutrition </h2>
+        <div id="nutr-box">
+            <div id="nutr-box-header">
+                <div id="header-left">
+                    <button id="add-food-butn">Add Food</button>
+                </div>
+                <div id="day-div">
+                    <button id="prev-day" class="change-day">&lt;</button>
+                    <h1 id="day-label"> Day X </h1>
+                    <button id="next-day" class="change-day">&gt;</button>
+                </div>
+                <div id="header-right">
+                    <button id="toggle-view-butn">Toggle View</button>
+                    <button id="exit-search">✖</button>
+                </div>
+            </div>
+            <div id="nutrition-container">
+
+                <div id="left-panel">
+                    <div class="search-header">
+                        <h2 id="food-search-label">Search for food</h2>
+                    </div>
+                    <div id="usda-search">
+                        <label for="food-input" class="visually-hidden">Search for food</label>
+                        <input type="text" id="food-input" placeholder="Search for food">
+                        <div id="autocomplete-list" class="autocomplete-items"></div>
+                    </div>
+                </div>
+              
+                <div id="right-panel">
+
+                    <div id="usda-info" style="display: none;">
+                        <h3>Selected Food</h3>
+                        <ul id="usda-details"></ul>
+                        <button id="add-usda-food">Add</button>
+                    </div>
+              
+                    <div id="custom-food" style="display: block;">
+                        <h3 id="food-manual-label">Enter food manually</h3>
+                        <form id="custom-form">
+                            <label for="food-name" >Name</label>
+                            <input id="food-name" name="food-name" class="macro-input" type="text" placeholder="Name" required>
+                            <label for="food-quantity" >Quantity</label>
+                            <input id="food-quantity" name="food-quantity" class="macro-input" type="number" placeholder="Quantity" min="0" value="1.0" required>
+                            <label for="meal-input" >Meal</label>
+                            <input list="meal-options" id="meal-input" name="meal-input" class="macro-input" placeholder="Meal">
+                            <datalist id="meal-options">
+                                <option value="Breakfast">
+                                <option value="Lunch">
+                                <option value="Dinner">
+                                <option value="Snacks">
+                            </datalist>
+                            <label for="food-calories" >Calories</label>
+                            <input id="food-calories" name="food-calories" class="macro-input" type="number" placeholder="Calories" min="0" required>
+                            <label for="food-carbs" >Carbs</label>
+                            <input id="food-carbs" name="food-carbs" class="macro-input" type="number" placeholder="Carbs" min="0">
+                            <label for="food-fat" >Fat</label>
+                            <input id="food-fat" name="food-fat" class="macro-input" type="number" placeholder="Fat" min="0">
+                            <label for="food-protein" >Protein</label>
+                            <input id="food-protein" name="food-protein" class="macro-input" type="number" placeholder="Protein" min="0">
+                            <label for="food-fiber" >Fiber</label>
+                            <input id="food-fiber" name="food-fiber" class="macro-input" type="number" placeholder="Fiber" min="0">
+                            <label for="food-sodium" >Sodium</label>
+                            <input id="food-sodium" name="food-sodium" class="macro-input" type="number" placeholder="Sodium" min="0">
+                            <label for="food-sugar" >Sugar</label>
+                            <input id="food-sugar" name="food-sugar" class="macro-input" type="number" placeholder="Sugar" min="0">
+                            <button type="submit">Add</button>
+                        </form>
+                    </div>
+
+                </div>
+              
+            </div>
+
+            <div id="macro-view-box">
+                <div class="macro-bar" id="calorie-bar"><h1>Calories</h1><p id="cal-count">0000 / 0000</p></div>
+                <div class="macro-bar" id="carbs-bar"><h1>Carbs</h1><p id="carb-count">000g / 000g</p></div>
+                <div class="macro-bar" id="fat-bar"><h1>Fat</h1><p id="fat-count">000g / 000g</p></div>
+                <div class="macro-bar" id="protein-bar"><h1>Protein</h1><p id="prot-count">000g / 000g</p></div>
+                <div class="macro-bar" id="fiber-bar"><h1>Fiber</h1><p id="fib-count">000g / 000g</p></div>
+                <div class="macro-bar" id="sodium-bar"><h1>Sodium</h1><p id="sod-count">0000mg / 0000mg</p></div>
+                <div class="macro-bar" id="sugar-bar"><h1>Sugar</h1><p id="sug-count">000g / 000g</p></div>
+                <div id="water-div">
+                    <div id="water-bar">
+                        <h1>Water</h1><p id="water-count">000ml / 000ml</p>
+                    </div>
+                    <div id="change-water">
+                        <button id="change-water-butn">+/-</button>
+                    </div>
+                    <div id="water-quantity">
+                        <form id="water-form">
+                            <label for="water-input" class="visually-hidden">Add/Remove Water</label>
+                            <input id="water-input" name="water-input" type="number" placeholder="Add/Remove Water">
+                        </form>
+                    </div>
+                </div>
+                
+                
+                
+            </div>
+            <div id="food-view-box">
+                <div class="meal-column" id="breakfast">
+                    <h2>Breakfast</h2>
+                    <ul id="breakfast-list"></ul>
+                </div>
+                <div class="meal-column" id="lunch">
+                    <h2>Lunch</h2>
+                    <ul id="lunch-list"></ul>
+                </div>
+                <div class="meal-column" id="dinner">
+                    <h2>Dinner</h2>
+                    <ul id="dinner-list"></ul>
+                </div>
+                <div class="meal-column" id="snacks">
+                    <h2>Snacks</h2>
+                    <ul id="snacks-list"></ul>
+                </div>
+            </div>
+
+        </div>
+        
+        <script src="./scripts/header.js"></script>
+        <script type="module" src="./scripts/nutrition.js"></script>
+        
+        <footer class="foot">
+            <h1 id="resources-title" class="foot"> More Resources:</h1>
+            <ul class="foot">
+                <li class="foot"><a class="foot" href="https://www.myplate.gov/">MyPlate</a></li>
+                <li class="foot"><a class="foot" href="https://www.jmu.edu/recreation/index.shtml">UREC</a></li>
+            </ul>
+        </footer>
+
+    </body>
+
+</html>

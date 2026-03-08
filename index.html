@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <title> Health App </title>
+        <link rel="stylesheet" href="./styles/home.css">
+        <link rel="stylesheet" href="./styles/header.css">
+        <link rel="stylesheet" href="./styles/footer.css">
+        <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+    </head>
+
+    <body>
+
+        <header>
+            <div id="header-top">
+                <div id="title-logo">
+                    <h1 id="title"><a href="index.html">Health Journal</a></h1>
+                    <img id="logo" src="./images/heart" alt="Heart icon representing health and wellness">
+                </div>
+                <div id="world-clock">00:00:00 AM</div>
+                <div id="nav-expand"></div>
+            </div>
+
+            <nav>
+                <div id="menubar">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="nutrition.html">Nutrition</a></li>
+                        <li><a href="exercise.html">Exercise</a></li>
+                        <li><a href="bio.html">Bio</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+
+
+        <div class="grid-container">
+            <div class="top-row">
+                <h2 id="welcome"> Welcome Back,</h2>
+                <h2 id="name"> No Name Found </h2>
+
+            </div>
+
+            <div id="col1" class="col">
+                <h3><a href="bio.html">Daily Goals</a></h3>
+                <div class="goals-div">
+                </div>
+            </div>
+
+            <div id="col2" class="col">
+                <h3><a href="nutrition.html">Nutrition</a></h3>
+                <div class="nutrition-grid">
+                    <div class="nutrient-group">
+                        <div class="nutrient" id="prot">000%</div>
+                        <div class="label">Protein</div>
+                    </div>
+                    <div class="nutrient-group">
+                        <div class="nutrient" id="carb">000%</div>
+                        <div class="label">Carbs</div>
+                    </div>
+                    <div class="nutrient-group">
+                        <div class="nutrient" id="cal">000%</div>
+                        <div class="label">Calories</div>
+                    </div>
+                    <div class="nutrient-group">
+                        <div class="nutrient" id="fat">000%</div>
+                        <div class="label">Fats</div>
+                    </div>
+                    <div class="nutrient-group">
+                        <div class="nutrient" id="water">000%</div>
+                        <div class="label">Water</div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="col3" class="col">
+                <h3><a href="exercise.html">Exercise</a></h3>
+                <h4 id="split-label"> Today's Workout </h4>
+                <h4 id="split-day"> No Workout Found</h4>
+            </div>
+
+        </div>
+        
+
+        <footer class="foot">
+            <h1 id="resources-title" class="foot"> More Resources:</h1>
+            <ul class="foot">
+                <li class="foot"><a class="foot" href="https://www.myplate.gov/">MyPlate</a></li>
+                <li class="foot"><a class="foot" href="https://www.jmu.edu/recreation/index.shtml">UREC</a></li>
+            </ul>
+        </footer>
+
+        <script src="./scripts/header.js"></script>
+        <script type="module" src="./scripts/home.js"></script>
+    </body>
+    
+
+
+
+</html>

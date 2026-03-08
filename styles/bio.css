@@ -1,0 +1,337 @@
+body {
+    margin: 0;
+    background-color: #DCE6F0;
+}
+
+#bio-title {
+    display: flex;
+    justify-content: center;
+    color: #1E5078;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 60px;
+    font-weight: bold;
+    margin: 2vh 0;
+}
+
+#bio-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    background-color: #F5FAFF;
+    border-radius: 64px;
+    height: 70vh;
+    margin-top: 0;
+    margin-bottom: 1vh;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    margin: 0 4vw;
+}
+
+.bio-section {
+    margin: 3vh 0;
+    padding: 1.5vh 0;
+}
+
+.bio-section h3 {
+    color: #1E5078;
+    margin-bottom: 1vh;
+    font-size: 1.8rem;
+    border-bottom: 2px solid #AFCBDF;
+    padding-bottom: 0.5vh;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.bio-section ul {
+    list-style: none;
+    padding-left: 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    width: 22vw;
+}
+
+.bio-section li, .bio-section p {
+    margin: 1.5vh 0;
+    font-size: 1.1rem;
+    color: #333;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.bio-section li {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#bio-header {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    align-items: center;
+}
+
+.bio-butn {
+    position: relative;
+    top: 10px;
+    margin-bottom: 2vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 5vh;
+    width: 6vw;
+    border-radius: 8px;
+    background-color: #F5FAFF;
+    color: #1E5078;
+    font-weight: bold;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    border: none;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}
+
+button:active {
+    box-shadow: none;
+}
+
+input {
+    width: 13vw;
+}
+
+#goals-list input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #DCE6F0;
+    margin-right: 1vw;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: inline-block;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+#goals-list input[type="checkbox"]::after {
+    content: "✔";
+    position: absolute;
+    top: -27px;
+    left: 0px;
+    font-size: 50px;
+    color: green;
+    display: none;
+    pointer-events: none;
+}
+
+#goals-list input[type="checkbox"]:checked::after {
+    display: block;
+}
+
+#goals-list span {
+    position: relative;
+    top: -10px;
+}
+
+.delete-goal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: red;
+    border: 1px solid lightgray;
+    cursor: pointer;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
+    width: 1vw;
+    height: 2vh;
+    border-radius: 5px;
+}
+
+#add-goal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 3vh;
+    width: 4vw;
+    border-radius: 8px;
+    background-color: #DCE6F0;
+    color: #1E5078;
+    font-weight: bold;
+    font-size: .6vw;
+    font-family: Arial, Helvetica, sans-serif;
+    border: none;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}
+
+input {
+    width: 12vw;
+    margin-right: 0;
+    padding-right: 0;
+}
+
+select {
+    width: 12.1vw;
+    margin-right: 0;
+    padding-right: 0; 
+}
+
+#goal-hint {
+    font-size: 0.75vw;
+    color: rgba(0, 0, 0, 1);
+}
+
+.feet-input {
+    width: 5.25vw;
+}
+
+.inches-input {
+    width: 5.25vw;
+}
+
+
+
+
+/* Dark Mode */
+
+body.dark-mode #goal-hint {
+    color: #7e7e7e;
+}
+
+body.dark-mode .delete-goal {
+    background-color: #2a2a2a;
+    border-color: #373737;
+}
+
+body.dark-mode #add-goal {
+    background-color: #2a2a2a;
+    color: #90caf9;
+    box-shadow: none;
+}
+
+body.dark-mode #goals-list input[type="checkbox"] {
+    background-color: #2c2c2c;
+    box-shadow: none;
+    accent-color: #90caf9;
+}
+
+body.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+body.dark-mode #bio-title {
+    color: #90caf9;
+    text-shadow: none;
+}
+
+body.dark-mode #bio-box {
+    background-color: #1e1e1e;
+    box-shadow: none;
+}
+
+body.dark-mode .bio-section h3 {
+    color: #90caf9;
+    border-bottom: 2px solid #546e7a;
+}
+
+body.dark-mode .bio-section li,
+body.dark-mode .bio-section p {
+    color: #f0f0f0;
+}
+
+body.dark-mode .bio-butn {
+    background-color: #2c3e50;
+    color: #ffffff;
+    box-shadow: none;
+}
+
+body.dark-mode input,
+body.dark-mode select {
+    background-color: #2a2a2a;
+    color: #ffffff;
+    border: 1px solid #444;
+}
+
+/*smaller screen media query */
+@media (max-width: 1200px) {
+    #bio-box {
+        height: auto;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .bio-section {
+        width: 80%;
+        margin-bottom: 2vh;
+    }
+
+    .bio-section ul {
+        width: 100%;
+    }
+
+    .bio-section li span,
+    .bio-section li strong span {
+        font-size: 2vw;
+        line-height: 1.5;
+    }
+
+    #goals-list label {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 1vh;
+    }
+
+    #goals-list span {
+        font-size: 1rem;
+    }
+
+    #goal-hint {
+        font-size: 2vw;
+    }
+
+    .delete-goal {
+        width: 3vw;
+        height: 3vh;
+        margin-top: 1vh;
+    }
+
+    #add-goal {
+        font-size: 1rem;
+        width: auto;
+        padding: 0.5rem 1rem;
+    }
+
+    input{
+        width: 40.6vw;
+    }
+    
+    select {
+        width: 41vw;
+    }
+
+    .feet-input {
+        width: 18.2vw;
+    }
+
+    .inches-input {
+        width: 18.2vw;
+    }
+
+    .bio-butn {
+        width: 10vw;
+        height: 5vh;
+        border-radius: 8px;
+        font-size: 1.5vw;
+    }
+
+    #edit-profile-butn {
+        margin-left: 15vw;
+    
+    }
+    
+    #change-mode-butn {
+        margin-right: 15vw;
+    }
+
+}

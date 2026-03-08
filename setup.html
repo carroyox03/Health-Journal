@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <title> Setup Profile </title>
+        <link rel="stylesheet" href="./styles/setup.css">
+
+        <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+    </head>
+
+    <body>
+        <main>
+            <h1>Welcome! Set Up Your Bio</h1>
+            <div id="import-div">
+                <h2>Have a profile to import?</h2>
+                <button id="import-btn">Import</button>
+            </div>
+            <form id="setup-form">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+                
+        
+                <label for="age">Age</label>
+                <input type="number" id="age" name="age" min="0" required>
+        
+                <label for="sex">Sex</label>
+                <select id="sex" name="sex" required>
+                    <option value="">Select...</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                </select>
+        
+                <div class="height-inputs">
+                    <div>
+                        <label for="height-feet">Height (ft)</label>
+                        <input type="number" id="height-feet" name="height-feet" min="0" required>
+                    </div>
+                    <div>
+                        <label for="height-inches">Height (in)</label>
+                        <input type="number" id="height-inches"name="height-inches" min="0" max="11" required>
+                    </div>
+                    
+                </div>
+        
+                <label for="weight">Weight</label>
+                <input id="weight" type="number" name="weight" min="0" required>
+
+                <label>Weight Change Goal</label>
+                <select name="goal" required>
+                    <option value="">Select a goal...</option>
+                    <option value="Maintain Weight">Maintain Weight</option>
+                    <option value="Lose 0.5 lbs/week">Lose 0.5 lbs/week</option>
+                    <option value="Lose 1 lbs/week">Lose 1 lbs/week</option>
+                    <option value="Lose 1.5 lbs/week">Lose 1.5 lbs/week</option>
+                    <option value="Lose 2 lbs/week">Lose 2 lbs/week</option>
+                    <option value="Gain 0.5 lbs/week">Gain 0.5 lbs/week</option>
+                    <option value="Gain 1 lbs/week">Gain 1 lbs/week</option>
+                    <option value="Gain 1.5 lbs/week">Gain 1.5 lbs/week</option>
+                    <option value="Gain 2 lbs/week">Gain 2 lbs/week</option>
+                </select>
+        
+                <label for="water-goal">Water Goal</label>
+                <input id="water-goal" type="number" name="waterGoal" min="0" required>
+        
+                <label>Diet Preference</label>
+                <select name="macroSplit" required>
+                    <option value="">Select a split...</option>
+                    <option value="Balanced">Balanced</option>
+                    <option value="High Protein">High Protein</option>
+                    <option value="High Carb">High Carb</option>
+                    <option value="Low Carb">Low Carb</option>
+                </select>
+        
+                <label>Current Activity Level</label>
+                <select name="activityLvl" required>
+                    <option value="">Select a level...</option>
+                    <option value="Sedentary">Sedentary</option>
+                    <option value="Light">Light</option>
+                    <option value="Moderate">Moderate</option>
+                    <option value="Active">Active</option>
+                    <option value="Very Active">Very Active</option>
+                </select>
+
+                <label>Planned Workout Frequency</label>
+                <select name="workoutFreq" required>
+                    <option value="">Select a frequency...</option>
+                    <option value="1 Day">1 Day</option>
+                    <option value="2 Days">2 Days</option>
+                    <option value="3 Days">3 Days</option>
+                    <option value="4 Days">4 Days</option>
+                    <option value="5 Days">5 Days</option>
+                    <option value="6 Days">6 Days</option>
+                    <option value="7 Days">7 Days</option>
+                </select>
+
+                <div id="checkboxes">
+                    <label id="theme-tag">Theme:</label>
+                    <div class="themes">
+                        <label for="dark">Dark Mode</label>
+                        <input id="dark" type="radio" name="theme" value="dark">
+                    </div>
+                    <div class="themes">
+                        <label for="light">Light Mode</label>
+                        <input id="light" type="radio" name="theme" value="light" checked>
+                    </div>
+                </div>
+
+        
+                <button type="submit">Save Bio</button>
+            </form>
+        </main>
+
+        <script type="module" src="./scripts/setup.js"></script>
+    </body>
+    
+
+
+</html>

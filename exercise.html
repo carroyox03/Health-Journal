@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <title> Exercise </title>
+        <link rel="stylesheet" href="./styles/header.css">
+        <link rel="stylesheet" href="./styles/exercise.css">
+        <link rel="stylesheet" href="./styles/footer.css">
+        <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+    </head>
+
+    <body>
+        <header>
+            <div id="header-top">
+                <div id="title-logo">
+                    <h1 id="title"><a href="index.html">Health Journal</a></h1>
+                    <img id="logo" src="./images/heart" alt="Heart icon representing health and wellness">
+                </div>
+                <div id="world-clock">00:00:00 AM</div>
+                <div id="nav-expand"></div>
+            </div>
+
+            <nav>
+                <div id="menubar">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="nutrition.html">Nutrition</a></li>
+                        <li><a href="exercise.html">Exercise</a></li>
+                        <li><a href="bio.html">Bio</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <h2 id="exercises-title"> Exercise </h2>
+        <div id="exercise-box">
+            <div id="exercise-box-header">
+                <div id="day-div">
+                    <button id="prev-day" class="change-day">&lt;</button>
+                    <h1 id="day-label"> Day X </h1>
+                    <button id="next-day" class="change-day">&gt;</button>
+                </div>
+            </div>
+
+            <div id="exercise-box-body">
+                <h2 id="split-name">Push Day</h2>
+                <div id="lists-div">
+                    <div class="muscle-box">
+                        <label>Chest</label>
+                        <ul class="exercise-list">
+                            <li>Incline Dumbbell Press</li>
+                            <li>Cable Chest Flies</li>
+                        </ul>
+                    </div>
+
+                    <div class="muscle-box">
+                        <label>Tricep</label>
+                        <ul class="exercise-list">
+                            <li>Cable Tricep Pushdown</li>
+                            <li>Single Arm Tricep Overhead Extension</li>
+                        </ul>
+                    </div>
+
+                    <div class="muscle-box">
+                        <label>Shoulder</label>
+                        <ul class="exercise-list">
+                            <li>Dumbbell Lateral Raises</li>
+                            <li>Dumbbell Shoulder Press</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <script src="./scripts/header.js"></script>
+        <script type="module" src="./scripts/exercise.js"></script>
+
+        <footer class="foot">
+            <h1 id="resources-title" class="foot"> More Resources:</h1>
+            <ul class="foot">
+                <li class="foot"><a class="foot" href="https://www.myplate.gov/">MyPlate</a></li>
+                <li class="foot"><a class="foot" href="https://www.jmu.edu/recreation/index.shtml">UREC</a></li>
+            </ul>
+        </footer>
+    </body>
+
+
+
+</html>

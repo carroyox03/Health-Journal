@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <title> Bio </title>
+        <link rel="stylesheet" href="./styles/header.css">
+        <link rel="stylesheet" href="./styles/bio.css">
+        <link rel="stylesheet" href="./styles/footer.css">
+        <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+    </head>
+
+    <body>
+        <header>
+            <div id="header-top">
+                <div id="title-logo">
+                    <h1 id="title"><a href="index.html">Health Journal</a></h1>
+                    <img id="logo" src="./images/heart" alt="Heart icon representing health and wellness">
+                </div>
+                <div id="world-clock">00:00:00 AM</div>
+                <div id="nav-expand"></div>
+            </div>
+
+            <nav>
+                <div id="menubar">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="nutrition.html">Nutrition</a></li>
+                        <li><a href="exercise.html">Exercise</a></li>
+                        <li><a href="bio.html">Bio</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <div id="bio-header">
+            <button class="bio-butn" id="edit-profile-butn">Edit Profile</button>
+            <button class="bio-butn" id="delete-profile">Delete Profile</button>
+            <h2 id="bio-title"> Bio </h2>
+            <button class="bio-butn" id="export-profile">Export Profile</button>
+            <button class="bio-butn" id="change-mode-butn">Dark Mode</button>
+        </div>
+        
+        <div id="bio-box">
+            <section class="bio-section">
+                <h3>Personal Information</h3>
+                <ul>
+                    <li><span>Name:</span><strong><span data-key="name"></span></strong></li>
+                    <li><span>Age:</span><strong><span data-key="age"></span></strong></li>
+                    <li><span>Sex:</span><strong><span data-key="sex"></span></strong></li>
+                    <li><span>Height:</span><strong><span data-key="height"></span></strong></li>
+                    <li><span>Weight:</span><strong><span data-key="weight"></span><span></span></strong></li>
+                </ul>
+            </section>
+
+            <section class="bio-section">
+                <h3>Health Goals</h3>
+                <p id="goal-hint"> Edit Profile to Add Goals!</p>
+                <ul id="goals-list">
+                    <li>
+                        <label>
+                            <input type="checkbox" data-key="goal1">
+                            <span>Drink 8 Cups of water</span>
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="checkbox" data-key="goal2">
+                            <span>Walk 10,000 Steps</span>
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="checkbox" data-key="goal3">
+                            <span>Sleep at least 7 hours</span>
+                        </label>
+                    </li>
+                </ul>
+            </section>
+
+            <section class="bio-section">
+                <h3>Nutrition Preferences</h3>
+                <ul>
+                    <li>
+                        <span>Weight Goal:</span>
+                        <strong><span data-key="goal"></span></strong>
+                    </li>
+                    <li>
+                        <span>Water Intake:</span>
+                        <strong><span data-key="water-goal"></span></strong>
+                    </li>
+                    <li>
+                        <span>Macro Goal:</span>
+                        <strong><span data-key="macro-split"></span></strong>
+                    </li>
+                    <li>
+                        <span>Activity Level:</span>
+                        <strong><span data-key="activity-lvl"></span></strong>
+                    </li>
+                    <li>
+                        <span>Workout Frequency:</span>
+                        <strong><span data-key="workout-freq"></span></strong>
+                    </li>
+                </ul>
+            </section>
+        </div>
+
+        <script src="./scripts/header.js"></script>
+
+        <footer class="foot">
+            <h1 id="resources-title" class="foot"> More Resources:</h1>
+            <ul class="foot">
+                <li class="foot"><a class="foot" href="https://www.myplate.gov/">MyPlate</a></li>
+                <li class="foot"><a class="foot" href="https://www.jmu.edu/recreation/index.shtml">UREC</a></li>
+            </ul>
+        </footer>
+
+        <script type="module" src="./scripts/bio.js"></script>
+    </body>
+
+
+
+</html>
